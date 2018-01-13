@@ -22,3 +22,31 @@ Theming works on the cheating. I have includes core `bootstrap` sass files. whic
 
 3. create pug files and enjoy.
 
+
+### development
+
+1. Run  `npm run gulp serve` this also includes `live reload`.
+
+
+### Production 
+
+1. Just run `gulp`. This will create production ready dist files. 
+
+2. If want to create `Zip` bundle of the project then run `gulp build` 
+
+
+## Tasks
+
+1. create support for the navigation sytem.
+
+2. create task to create 
+  - sitemap.xml
+  - robot.txt
+  
+3. Add image optimiser.
+
+4. Add support for animation.css
+
+5. Write `gulp task` to deploy this to `gh-pages`  
+
+

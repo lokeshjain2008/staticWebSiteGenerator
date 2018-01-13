@@ -11,6 +11,9 @@ const reload = browserSync.reload;
 
 let dev = true;
 
+// For better data for the website.....
+// [link](https://tusharghate.com/rendering-pug-templates-with-multiple-data-files)
+
 
 gulp.task('views', () => {
   return gulp.src('app/*.pug')
