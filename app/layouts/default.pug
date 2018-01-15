@@ -1,22 +1,8 @@
 doctype html
 html.no-js(lang='en, en_US')
   include ../includes/header
-    // build:js scripts/vendor/modernizr.js
-    script(src='/bower_components/modernizr/modernizr.js')
-    // endbuild
-  body
-    <!--[if lt IE 10]>
-      p.browserupgrade You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-    <![endif]-->
-    div
-      nav.navbar.navbar-expand-lg.navbar-light.bg-light
-        ul.nav.nav-pills.pull-right
-          li.active: a(href='#') Home
-          li: a(href='#') About
-          li: a(href='#') Contact
+  .container
+    block content
 
-        h3.text-muted webapp
-    .container
-      block content
-
-    include ../includes/footer
+.coitainer-fluid
+  include ../includes/footer

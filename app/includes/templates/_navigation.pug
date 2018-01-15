@@ -1,18 +1,28 @@
 mixin navLink(link, name)
-  li(
-    class={active: name == activePage}
+  li.nav-item(
+    class={active: name == selected}
     )
-    a(
+    a.nav-link(
       href=link
     ) #{name}
 
-nav#nav
-  ul
-    +navLink('index.html','Home')
-    +navLink('/about.html','Study Nursing')
-    +navLink('/contact.html','Work in Germany')
-    <li>
-      <a href="https://api.whatsapp.com/send?phone=4915254279017">
-      <i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp
-      </a>
-    </li>
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  <a class="navbar-brand" href="#">
+    img(src="/images/btcwiki-32.png", alt="BTC", style='vertical-align:text-bottom')
+    |Wiki
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  .collapse.navbar-collapse#navbarContent
+    ul.navbar-nav.mr-auto
+      +navLink('index.html','Home')
+      +navLink('/how-to-buy-bitcoin.html','Buy Bitcoin/Coins')
+      +navLink('/invest-bitcoin-crypto.html','Safe Investment')
+      +navLink('/crypto-currecy-guide.html', 'Crypto Guide')
+      +navLink('/bitcoin-earn-crpto-guide.html', 'Crypto Wiki')
+      +navLink('/bitcoin-price-india.html', 'Pricing')
+      +navLink('/bitcoin-facts.html','Do you Know?')
+      +navLink('/bitwiki-bitcoin-blog-news.html','Blog')
+      +navLink('/bitcoin-altcoin-google-news.html','Google News')
+

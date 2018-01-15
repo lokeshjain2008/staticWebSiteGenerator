@@ -1,22 +1,7 @@
 extends layouts/default
-prepend title
-  title="HHEHEEHE"
+block title
+  title='BtcWiki | Home, Bitcoin india, cryptocurrency, cryptoCoins,  crypto news, bitcoin price'
+prepend link
+  -var selected='Home'
 block content
-  .jumbotron
-    h1 'Allo, 'Allo!
-    p.lead Always a pleasure scaffolding your apps.
-    p: a.btn.btn-lg.btn-success(href='#') Splendid!
-
-  .row.marketing
-    .col-lg-6
-      h4 HTML5 Boilerplate
-
-      h4 Sass
-      button.btn.btn-primary.btn.lg Test Button
-      p Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
-
-      h4 Bootstrap
-      p Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
-
-      h4 Modernizr
-      p Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.
+  p Hello this is website content.
