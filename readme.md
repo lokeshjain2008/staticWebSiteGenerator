@@ -18,7 +18,7 @@ Theming works on the cheating. I have includes core `bootstrap` sass files. whic
 
 1. download this project or `clone` it.
 
-2. `> npm i && bower i`
+2. `> npm i && bower i(not fully rquired, will get rid of Bower prefer CDN)` 
 
 3. create pug files and enjoy.
 
@@ -49,4 +49,10 @@ Theming works on the cheating. I have includes core `bootstrap` sass files. whic
 
 5. Write `gulp task` to deploy this to `gh-pages`  
 
+---
+
+### Resources
+1. Better pug files [with data files](https://tusharghate.com/rendering-pug-templates-with-multiple-data-files)
+2. [Firebase tools](https://github.com/firebase/firebase-tools)
+3. [Surge.sh](http://surge.sh/) and [Netify](https://www.netlify.com/) , [getPubli](https://getpublii.com/)
 
