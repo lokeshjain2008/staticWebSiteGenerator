@@ -5,7 +5,7 @@ const browserSync = require('browser-sync').create();
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
-
+const log = require('fancy-log');
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
@@ -16,8 +16,11 @@ let dev = true;
 
 
 gulp.task('views', () => {
-  return gulp.src('app/*.pug')
+  return gulp.src('app/views/*.pug')
     .pipe($.plumber())
+    .pipe($.data(function(file) {
+      return JSON.parse(fs.readFileSync('app/meta/site-data.json'))
+    }))
     .pipe($.pug({pretty: true}))
     .pipe(gulp.dest('.tmp'))
     .pipe(reload({stream: true}));
@@ -204,3 +207,42 @@ gulp.task('default', () => {
     runSequence(['clean', 'wiredep'], 'build', resolve);
   });
 });
+
+
+
+/////////////// Generate SiteMap.xml////////////////
+var sm = require('sitemap')
+    , fs = require('fs');
+
+    // for complete documentation.
+    // Link https://www.npmjs.com/package/sitemap#example-of-mobile-url
+gulp.task('sitemap',()=>{
+  var site_data = JSON.parse(fs.readFileSync("app/meta/site-data.json"));
+  var sitemap = sm.createSitemap({
+    hostname: 'http://www.mobilitas-training.com',
+    cacheTime: 1000*60*60,  //(7 days) cache purge period
+    urls: [
+        { url: '/' , changefreq: 'weekly', priority: 1, lastmodrealtime: true,
+          lastmodfile: 'app/views/index.pug'
+        },
+       ...site_data.pages.map((page)=>({
+          url: `/${page}.html` , changefreq: 'weekly', priority: 0.8, lastmodrealtime: true,
+          lastmodfile: 'app/views/index.pug'
+       }))
+    ]
+});
+
+fs.writeFileSync("sitemap.xml", sitemap.toString());
+});
+
+
+gulp.task("test",()=>{
+  log(JSON.parse(fs.readFileSync("app/meta/site-data.json")));
+  // gulp.src('app/meta/site-data.json')
+  // .pipe($.data(function(file){
+  //   return
+  // }))
+  // .pipe(log)
+  // .on('data',()=>{ log("console log data")})
+  // .on('success',()=>log("on success"))
+})

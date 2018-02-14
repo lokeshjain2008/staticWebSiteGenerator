@@ -1,0 +1,10 @@
+.footer.border-top.border.bg-primary
+  if showFbCustomerChat
+    .fb-customerchat(
+        page_id="<PAGE_ID>"
+        ref="<OPTIONAL_WEBHOOK_PARAM>"
+        theme_color="<HEX_COLOR_CODE>"
+        logged_in_greeting="<GREETING_MESSAGE_FOR_LOGGED_IN_USERS>"
+        logged_out_greeting="<GREETING_MESSAGE_FOR_LOGGED_OUT_USERS>")
+  p &hearts; from BTCWiki team.
+include templates/_foot_scripts

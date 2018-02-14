@@ -1,0 +1,17 @@
+{
+  "author": "https://www.genialInfo.com",
+  "name": "<website-name>",
+  "website": "<complete domain name>",
+  "logo": "<logo-url>",
+  "pages": [
+    "index",
+    "about",
+    "contact"
+  ],
+  "seo": {
+    "title": "<tag line of the website site.data.json>",
+    "description": "<description of website from site-data.json>"
+  },
+  "showFbCustomerChat": false,
+  "showFbCommentBox": false
+}

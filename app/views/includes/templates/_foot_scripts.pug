@@ -7,6 +7,29 @@ script.
   r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
   ga('create','UA-105593237-1');ga('send','pageview');
 
+//- Facebook JavaScript sdk
+script.
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : 540048976032941 || '<<<your-app-id>>>', // Don't forget to add app-id(vanishMe is being used)
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.12'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+<div id="fb-root"></div>
+
+
 // build:js scripts/vendor.js
 // bower:js
 script(src='/bower_components/modernizr/modernizr.js')
