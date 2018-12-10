@@ -1,3 +1,54 @@
+footer#footer
+  .major.special.w-100
+    h1.text-center.text-decoration Connect with us
+  section.footer-contact
+    .container.text-white.contact.p-4
+      .row.bg-primary.contact-banner
+        .col-md-6.p-4
+          h2.text-info Head office
+          dl.alt
+            dt Address
+            dd Cheenis Solution UG <br>Friedrich-Ebert-Allee 13 <br>53113 Bonn, <br/> Germany
+            dt Phone
+            dd
+              a.text-light(href="tel:+49022892939142") +49 (0) 228 9293 9142
+            dt Fax
+            dd +49 (0) 228 9293 9101
+            dt Email
+            dd
+              a.text-light(href='mailto:info@cheenissolution.com') info@cheenissolution.com
+        .col-md-6.p-4
+          h2.text-info Branch office
+          dl.alt
+            dt Address
+            dd Cheenis Solutions Pvt Ltd <br/>
+              | #48/91, Vasantha Garden Main Street,
+              | <br/> Chennai 600023,
+              | <br/> India
+            dt Email
+              i.fa.fa-email
+            dd
+              a.text-light(href='mailto:info@cheenissolution.com') info@cheenissolution.com
+      .row.justify-content-center.arrow
+        i.fa.fa-sort-down.fa-4x.text-primary
+
+    .main.w-100.d-grid__center.d-grid
+      ul.nav.justify-content-center
+        li
+          a.nav-link.alt(href=social.twitter)
+            span.label.fa.fa-twitter.fa-2x.text-light
+        li
+          a.nav-link.alt(href=social.fb)
+            span.label.fa.fa-facebook.fa-2x.text-light
+        li
+          a.nav-link.alt(href=social.linkedin)
+            span.label.fa.fa-linkedin.fa-2x.text-light
+
+    p.m-0.p-2.text-center.text-white
+      small All rights reserved &copy Copyrights 2018 &nbsp;
+        a(href=website) CheenisSolution
+
+
 .footer.border-top.border.bg-primary
   if showFbCustomerChat
     .fb-customerchat(
@@ -6,5 +57,13 @@
         theme_color="<HEX_COLOR_CODE>"
         logged_in_greeting="<GREETING_MESSAGE_FOR_LOGGED_IN_USERS>"
         logged_out_greeting="<GREETING_MESSAGE_FOR_LOGGED_OUT_USERS>")
-  p &hearts; from BTCWiki team.
 include templates/_foot_scripts
+script.
+    var tab = window.location.hash
+    $(function(){
+      if(tab){
+        tab = tab.slice(1);
+        $(`#nav-${tab}-tab`).tab('show');
+        $(`#${tab}`).click();
+      }
+    })

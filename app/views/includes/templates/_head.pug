@@ -1,56 +1,55 @@
 head
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(charset='utf-8')
-    meta(name="robots", content="index,follow")
-    meta(name="author", content=author)
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="author" content="Mobilitas-Training">
-    <meta name="handheldfriendly" content="true">
-    <meta name="mobileoptimized" content="320">
-    <meta http-equiv="cleartype" content="on">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(charset='utf-8')
+  meta(name="robots", content="index,follow")
+  meta(name="author", content=author)
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="author" content="Mobilitas-Training">
+  <meta name="handheldfriendly" content="true">
+  <meta name="mobileoptimized" content="320">
+  <meta http-equiv="cleartype" content="on">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    //- social site tag
-    meta(itemprop="name" content=seo.title)
-    meta(itemprop="description" content=seo.description)
-    meta(itemprop="image" content=logo)
+  //- social site tag
+  meta(itemprop="name" content=seo.title)
+  meta(itemprop="description" content=seo.description)
+  meta(itemprop="image" content=logo)
 
-    link(rel="canonical" href=website)
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    meta(property="og:title" content=seo.title)
-    meta(property="og:description" content=seo.description)
-    meta(property="og:url" content=website)
-    meta(property="og:site_name" content=name)
-    meta(property="og:image" content=logo)
-    meta(property="fb:admins" content="{YOUR_FACEBOOK_USER_ID}")
-    //-twitter
-    <meta name="twitter:card" content="summary" />
-    meta(name="twitter:description" content=seo.description)
-    meta(name="twitter:title" content=seo.title)
-    //- https://moz.com/blog/meta-data-templates-123
+  link(rel="canonical" href=website)
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  meta(property="og:title" content=seo.title)
+  meta(property="og:description" content=seo.description)
+  meta(property="og:url" content=website)
+  meta(property="og:site_name" content=name)
+  meta(property="og:image" content=logo)
+  meta(property="fb:admins" content="{YOUR_FACEBOOK_USER_ID}")
+  //-twitter
+  <meta name="twitter:card" content="summary" />
+  meta(name="twitter:description" content=seo.description)
+  meta(name="twitter:title" content=seo.title)
+  //- https://moz.com/blog/meta-data-templates-123
 
-    meta(name='description', content=seo.description)
-    meta(name="keywords",
-        content=seo.keywords)
-    link(rel='apple-touch-icon', href='apple-touch-icon.png')
-    //-create 180x180 px logo for this.
+  meta(name='description', content=seo.description)
+  meta(name="keywords",
+    content=seo.keywords)
+  link(rel='apple-touch-icon', href='apple-touch-icon.png')
+  //-create 180x180 px logo for this.
 
-    block title
-      title `#{title}`
+  block title
+    title `#{title}`
+
+  // Place favicon.ico in the root directory
+  link(rel='stylesheet', href='styles/main.css')
+  link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+  <!--[if lte IE 8]>
+  <script src="assets/js/ie/html5shiv.js"></script>
+  <![endif]-->
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="styles/ie9.css" />
+  <![endif]-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="styles/ie8.css" />
+  <![endif]-->
 
 
-    // Place favicon.ico in the root directory
-
-    // build:css styles/vendor.css
-    // bower:css
-    // endbower
-    // endbuild
-
-    // build:css styles/main.css
-    link(rel='stylesheet', href='styles/main.css')
-    // endbuild
-
-    // build:js scripts/vendor/modernizr.js
-    script(src='/bower_components/modernizr/modernizr.js')
-    // endbuild

@@ -1,0 +1,40 @@
+extends layouts/default
+block prepend link
+  - var selected = 'CONTACT'
+block title
+  title='Cheenissolution | Contact, contact us'
+
+block content
+  //section
+  section
+
+  //form
+  section.border-bottom.mb-4
+    .container
+      .border-bottom.my-5
+        h2 Contact Form
+        p.lead Please, feel free to connect with us if you have any query related to our services or solutions.
+          |   We at CheenisSolution will be pleased to answer queries related to your industy needs whether it be
+          |   technical, automation process or talent resorcing.
+          |   You can also reach us via email or contact numbers.
+      .row
+        .col-sm-6.p-4
+          form(action="https://formspree.io/admin@cheenissolution.com" method="POST")
+            .form-group
+              label(for='yourEmail') Email address
+              input#yourEmai.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email' required)
+              small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+            .form-group
+              label(for='fullName') Full Name
+              input#fullName.form-control(type='text', placeholder='Please input full name. e.g. Bill Gates' required)
+            .form-group
+              label(for='jobTitle') Job Title
+              input#jobTitle.form-control(type='text', placeholder='Your Job Title' required)
+            .form-group
+              label(for='yourCompanyName') Your Company
+              input#yourCompanyName.form-control(type='text', placeholder='Company Name' required)
+            .form-group
+              label(for='message') Message
+              textarea#message.form-control(type='text', placeholder='Message' required)
+            button.btn-success.btn.bt-lg Submit Form
+

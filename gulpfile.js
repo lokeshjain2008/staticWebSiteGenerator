@@ -27,7 +27,7 @@ gulp.task('views', () => {
 });
 
 gulp.task('styles', () => {
-  return gulp.src('app/styles/*.scss')
+  return gulp.src('app/styles/*.{scss,css}')
     .pipe($.plumber())
     .pipe($.if(dev, $.sourcemaps.init()))
     .pipe($.sass.sync({
@@ -167,6 +167,29 @@ gulp.task('serve:test', ['scripts'], () => {
   gulp.watch('test/spec/**/*.js', ['lint:test']);
 });
 
+
+///////////////// Copy Other asset to the dist--- Tasks /////////////
+var sourceFiles = [ './src/assets/js/*',];
+var destination = './dist/';
+
+gulp.task("copyStyleScript",()=>{
+  //  gulp
+  //   .src('./src/assets/images/*')
+  //   .pipe(gulp.dest(destination+'/images'))
+
+    gulp
+    .src('./.tmp/scripts/*')
+    .pipe(gulp.dest(destination+'/scripts'))
+
+    gulp
+    .src('./.tmp/styles/*')
+    .pipe(gulp.dest(destination+'/styles'))
+
+    gulp
+    .src(['CNAME', 'robot.txt', 'sitemap.xml'])
+    .pipe(gulp.dest('./dist'));
+})
+
 // inject bower components
 gulp.task('wiredep', () => {
   gulp.src('app/styles/*.scss')
@@ -204,7 +227,7 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 gulp.task('default', () => {
   return new Promise(resolve => {
     dev = false;
-    runSequence(['clean', 'wiredep'], 'build', resolve);
+    runSequence(['copyStyleScript', 'wiredep'], 'build', resolve);
   });
 });
 
@@ -219,7 +242,7 @@ var sm = require('sitemap')
 gulp.task('sitemap',()=>{
   var site_data = JSON.parse(fs.readFileSync("app/meta/site-data.json"));
   var sitemap = sm.createSitemap({
-    hostname: 'http://www.mobilitas-training.com',
+    hostname: site_data.website,
     cacheTime: 1000*60*60,  //(7 days) cache purge period
     urls: [
         { url: '/' , changefreq: 'weekly', priority: 1, lastmodrealtime: true,
@@ -246,3 +269,13 @@ gulp.task("test",()=>{
   // .on('data',()=>{ log("console log data")})
   // .on('success',()=>log("on success"))
 })
+
+
+// write task about to fetch the bootstrap sass and put the sass into the
+
+//app/sass/ folder
+
+
+gulp.task('getBootstrap',()=>{
+
+});

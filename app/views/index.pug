@@ -1,7 +1,105 @@
 extends layouts/default
+block prepend link
+  - var selected = 'HOME'
 block title
-  title='BtcWiki | Home, Bitcoin india, cryptocurrency, cryptoCoins,  crypto news, bitcoin price'
-prepend link
-  -var selected='Home'
+  title='Cheenissolution | Home'
 block content
-  p Hello this is website content.
+  section.banner-homepage-slop.mt-5
+    .container
+      .row.text-white.d-relative.mb-5
+        .col-md-3.col-sm-12
+          .card.mb-3
+            .card-header.bg-dark
+              h2.text-center.lead IT Counsulting
+            img.card-img-top(alt="IT consulting image" src="/images/it-consulting.jpg")
+            .card-body.text-dark
+              p We offer a complete set of IT services including Internet sites and applications, hosting services, IT infrastructure, Smart Products, Software Development and Professional Support Service (PSS).
+              p We deliver SAP implementation services in addition to support for on-going running operations in a remarkably quality-oriented and cost-effective manner within pledged timeframes.
+            .card-footer
+              a(href="/services.html").btn.btn-outline-success.btn-block Know More
+        .col-md-3.col-sm-12
+          .card.mb-3
+            .card-header.bg-dark
+              h2.text-center.lead Training & Developent
+            img.card-img-top(src="/images/training-development-icon.jpg" alt="Talent resourcing and training")
+            .card-body.text-dark
+              p Contracting out your recruitment and training process to us grants you access to the right people at the right circumstance.
+              p We impersonate ourselves as a part of your team, operating with your hiring managers, on your brand foot, with your culture, to manage all things related to talent acquisition.
+              P Technical training, coporate soft skills & campus to corporate training modules.
+            .card-footer
+              a(href="/services.html#talent").btn.btn-outline-success.btn-block Know More
+
+        .col-md-3.col-sm-12
+          .card.mb-3
+            .card-header.bg-dark
+              h2.text-center.lead IOT Solutions
+            img.card-img-top(src="/images/iot-logo.jpg" alt="Talent resourcing and training")
+            .card-body.text-dark
+              p Cheenis Solution supports you with various IoT and it-specific questions. Our range ofservices ranges from the provision of individual experts for specific tasks to the acquisition of holistic analysis, planning and implementation projects by our own teams.
+              p We specialize in implementing IoT applications for all platforms in a variety of languages.We develop end-to-end solutions for the IoT. From the hardware, firmware and backend, to the web or mobile app.
+            .card-footer
+              a(href="/services.html#iotSolutions").btn.btn-outline-success.btn-block Know More
+        .col-md-3.col-sm-12
+          .card.mb-3
+            .card-header.bg-dark
+              h2.text-center.lead Automation Solutions
+            img.card-img-top(src="/images/automation-process.jpg" alt="Talent resourcing and training")
+            .card-body.text-dark
+              p Cheenis Solution provides real-time process / industry automation management software andsolutions for Supervisory HMI, ICSS/ PLC/ DCS/ESD/ F&G/ SCADA/ BMS SYSTEMS, Mobile Operations, Production Management, MES, Performance Management, EMI, and Integration with Asset Management, Supply and Demand Chain and ERP applications. Cheenis has the necessary expertise to engineer innovative, effective and reliable solutions.
+            .card-footer
+              a(href="/services.html#automation").btn.btn-outline-success.btn-block Know More
+
+
+  // The Future
+  section.future.mb-5
+    .container
+      .row
+        .col-sm-12.col-md-3.border-right.d-flex.align-items-center
+          h1.display-4.text-info The Future
+        .col-sm-12.col-md-9
+          p.lead Looking ahead, we remain confident in our ongoing ability to deliver attractive long-term growth
+            | and value creation. We focus to-
+            | • Expand and develop our existing businesses and markets
+            | • Continually evaluate and look open into new markets
+            | • Sustain and flourish our distinction for leadership in indulgence
+            | We perceive the future appears good with the attribute of people we work with. The leadership of
+          p.lead Cheenis feels humble and courteous by the ambition, commitment, loyalty and delivery of every
+            | employee who individually and mutually reflect the Cheenis attitude of which each one can be so
+            | truly proud.
+          p.lead We pledge to sustain this attitude and guarantee that it continues to help the development and
+            | growth of the people who select to work with us and the business itself.
+            | We feel exclusive to work with such an excellent class of people and do not take that liability
+            | mildly, rather feel we can handle the future with confidence with them by our side.
+
+  // Values block
+  section.bg-primary
+    .container.py-4
+      .row.text-white
+        .col-sm-12.col-md-3.border-right
+          h4  CORPORATE MISSION
+          p Our mission is to supervise companies throughout the process of strategic change.
+           | We assist strategic and tactical corporate responses to the challenges and opportunities caused by global proliferation, technology and contention. Our function is to operate as a reliable consultant, delivering objective and results-driven analysis, solutions and implementation.
+          a.d-block.pt-2.text-info(href="/corporate.html#mission")
+            i.fa.fa-long-arrow-right.fa-3x
+
+        .col-sm-12.col-md-3.border-right
+          h4 CORPORATE VISION
+          p Our Vision is “Delivering the right automation and IT solution and making it accessible for everyone.”
+          p  Our success is built on an extraordinary commitment to quality and excellence in providing noteworthy services, client delight, robust focus on collaboration establishment and determination to thrive in every business endeavor.
+          a.d-block.pt-2.text-info(href="/corporate.html#vision")
+            i.fa.fa-long-arrow-right.fa-3x
+
+        .col-sm-12.col-md-3.border-right
+          h4 CORPORATE VALUES
+          p Cheenis Solution is driven by a passion for quality and excellence and guided by its core corporate values and will persist to show the way as the most dynamic and fortunate business organization.
+          p Our zeal for automation, technology and our customers is reflected in our corporate values: With our strong values which orbits around Innovation, Integrity, Quality, Customer Focus, Teamwork, Reliability Cheenis Solution will persist on its route to success.
+          a.d-block.pt-2.text-info(href="/corporate.html#values")
+            i.fa.fa-long-arrow-right.fa-3x
+
+        .col-sm-12.col-md-3
+          h4  CORPORATE RESPONSIBILTY & SUSTAINABILITY
+          p Corporate Social Responsibility (CSR) is a significant element in accomplishing our vision, particularly in a manner that it values and builds its connections with customers, business associates, employees and the entire community.
+          p We are a liable, pledged, and dedicated corporate citizen.
+          a.d-block.pt-2.text-info(href="/corporate.html#responsibility")
+            i.fa.fa-long-arrow-right.fa-3x
+

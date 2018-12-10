@@ -1,28 +1,29 @@
 mixin navLink(link, name)
-  li.nav-item(
-    class={active: name == selected}
+ li.nav-item(
+   class={active: name == selected}
     )
+  a.nav-link(href=link)
+    span.sr-only #{name}
+  li
     a.nav-link(
-      href=link
+      href=link,
+      class={'active text-info': name == selected}
     ) #{name}
 
-nav.navbar.navbar-expand-lg.navbar-light.bg-light
-  <a class="navbar-brand" href="#">
-    img(src="/images/btcwiki-32.png", alt="BTC", style='vertical-align:text-bottom')
-    |Wiki
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  .collapse.navbar-collapse#navbarContent
-    ul.navbar-nav.mr-auto
-      +navLink('index.html','Home')
-      +navLink('/how-to-buy-bitcoin.html','Buy Bitcoin/Coins')
-      +navLink('/invest-bitcoin-crypto.html','Safe Investment')
-      +navLink('/crypto-currecy-guide.html', 'Crypto Guide')
-      +navLink('/bitcoin-earn-crpto-guide.html', 'Crypto Wiki')
-      +navLink('/bitcoin-price-india.html', 'Pricing')
-      +navLink('/bitcoin-facts.html','Do you Know?')
-      +navLink('/bitwiki-bitcoin-blog-news.html','Blog')
-      +navLink('/bitcoin-altcoin-google-news.html','Google News')
+nav(class="navbar navbar-expand-lg navbar-light bg-secondary fixed-top")
+  .container
+    a.navbar-brand(href='#')
+      img(src="/images/logo-nav.jpg")
+    button.navbar-toggler.hidden-lg-up(type='button', data-toggle='collapse', data-target='#collapsibleNavId', aria-controls='collapsibleNavId', aria-expanded='false', aria-label='Toggle navigation')
+      i.fa.fa-navicon
+    #collapsibleNavId.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto.mt-2.mt-lg-0
+        +navLink('/', "HOME")
+        +navLink('/services.html', "SERVICES")
+        +navLink('/training.html', "TRAINING")
+        +navLink('/corporate.html', "CORPORATE VALUES")
+        +navLink('/about.html', "ABOUT US")
+        +navLink('/contact.html', "CONTACT")
+        +navLink('/impressum.html', "IMPRESSUM")
+
 
