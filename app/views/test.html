@@ -1,0 +1,30 @@
+#accordion.accordion
+  .card
+    #headingOne.card-header
+      h5.mb-0
+        button.btn.btn-link(type='button', data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+    #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordion')
+      .card-body
+  .card
+    #headingTwo.card-header
+      h5.mb-0
+        button.btn.btn-link.collapsed(type='button', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+    #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordion')
+      .card-body
+
+
+nav
+  #nav-tab.nav.nav-tabs(role='tablist')
+    a#nav-home-tab.nav-item.nav-link.active(data-toggle='tab', href='#nav-home', role='tab', aria-controls='nav-home', aria-selected='true') Home
+    a#nav-profile-tab.nav-item.nav-link(data-toggle='tab', href='#nav-profile', role='tab', aria-controls='nav-profile', aria-selected='false') Profile
+    a#nav-contact-tab.nav-item.nav-link(data-toggle='tab', href='#nav-contact', role='tab', aria-controls='nav-contact', aria-selected='false') Contact
+#nav-tabContent.tab-content
+  #nav-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-home-tab') ...
+  #nav-profile.tab-pane.fade(role='tabpanel', aria-labelledby='nav-profile-tab') ...
+  #nav-contact.tab-pane.fade(role='tabpanel', aria-labelledby='nav-contact-tab') ...
+
+
+
+
+
+  button.btn.btn-primary(type='submit') Submit

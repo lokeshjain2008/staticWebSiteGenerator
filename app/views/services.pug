@@ -1,0 +1,142 @@
+extends layouts/default
+block prepend link
+  - var selected = 'SERVICES'
+block title
+  title='Cheenissolution | services, trainings, IT consultation services'
+block content
+  section
+   .container
+      h1.text-center Our Services
+      p.lead Our years long expertise and profound solution competence in various process and industrial sectors and diversified engineering disciplines, this is our basis for the success of your projects.
+      p.lead CHEENIS combines various qualities to relieve you in the best possible way in the operative business.
+        | Our efficient sales and one-face-to-the-customer-philosophy guarantee you a simple and fast communication and coordination with us and a direct response to your inquiries.
+        | You can expect the same service from us in all areas of engineering services. Whether a project group on site is driving one of its projects or a technical office takes on a complex work package, CHEENIS stands for a reliable conclusion, legal certainty and high-end solutions in the technical field. The best engineers, IT consultants, project and quality managers work together daily on the success of their engineering and IT projects. Your challenges become our goals – according to your conditions and to your full transparent costs. We guarantee the best quality for your engineering services. Trust our competence as No. 1 in engineering and IT.
+
+  section
+    .container
+      #accordion.accordion
+        .card
+          #consulting.card-header.pointer(data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+            h5.mb-0
+              button.btn.btn-link
+                | IT CONSULTING
+          #collapseOne.collapse.show(aria-labelledby='consulting', data-parent='#accordion')
+            .card-body
+              .clearfix
+                img.img-fluid.float-left.float-sm-right.float-md-left.p-2(src="/images/it-consulting.jpg", alt="cheenissolution it consulting")
+                p Cheenis Solution delivers innovative application development projects universally by using pliable and scalable design methods that ensure perpetual Business availability and diminished development cycle times. We offer a complete set of IT services including Internet sites and applications, hosting services, IT infrastructure, Smart Products, Software Development and Professional Support Service (PSS). We deliver SAP implementation services in addition to support for on-going running operations in a remarkably quality-oriented and cost-effective manner within pledged timeframes.
+                p At Cheenis Solution, we provide a customized solution for each of our clients. We carry on careful analysis of issues and provide instantaneous responses for resolution. We see it as an important part of our service to understand our customer’s requirements and proactively meet their needs. Our foresight has contributed much to our success.
+                p We offer new and further development of mobile applications for the intended platform of your choice. Regardless of smartphone, wearable or other electronics, we provide solutions for you over Android, iOS, moreover platform independent conception, design and implementation is done based on your wishes.
+
+              h4 Some of the IT Consulting support we provide
+              ul.list-unstyled
+                each val in [ "Mobile Application", "Data Analytics", "Web Application Development","Hybrid/Cross-Platform App Development","UI/UX Design", "WEB SCRIPTS DEVELOPMENT","SAP Consultancy", "E-COMMERCE", "ERP / CRM DEVELOPMENT","CMS DEVELOPMENT","IT Application maintenance and support"]
+                  li
+                    i.fa.fa-check.text-success.pr-1.fa-lg
+                    = val
+
+        .card
+          #iotSolutions.card-header.pointer.collapsed(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+            h5.mb-0
+              button.btn.btn-link
+               | IoT Solutions
+          #collapseTwo.collapse(aria-labelledby='iotSolutions', data-parent='#accordion')
+            .card-body
+              .clearfix
+                img.img-fluid.float-left.float-sm-right.float-md-left.p-2(src="/images/iot-m.jpg", alt="cheenissolution IoT services and solutions")
+                p Digital disruption is all about understanding how technology is transforming industries and how corporations can respond to it. It can be a self-fulfilling prophecy: a threat to business or a great opportunity for those who consider it a way to adapt their strategy to inspire customers and be smarter and faster on the market Act.
+                p Our experts help companies in various industry, as well as cities and municipalities to use the opportunities of digitization and thus to be more than one step ahead of their competitors. The team of Cheenis Solution supports you with various IoT and it-specific questions. Our range of services ranges from the provision of individual experts for specific tasks to the acquisition of holistic analysis, planning and implementation projects by our own teams.
+                p Each customer will be looked after individually and according to their specific requirements in order to provide the best possible package of experience, project management and skillset. This means for you: an innovative and highly motivated team that has fun in its work and whose goal is the satisfaction of its customers is at your side with advice and action. We are specialized in the implementation of IoT applications for the latest generation mobile devices, native and cross platform.
+              h4 Objectives
+              ul.list-unstyled
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Create and deploy new applications using ArchestrA IDE
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Model the plant floor using automation objects
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Acquire data from field devices
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Work with alarm and history configuration in a Galaxy
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Define the security model for a Galaxy
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Configure application-level and device integration redundancy
+
+        .card
+          #automation.card-header.pointer.collapsed(data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+            h5.mb-0
+              button.btn.btn-link
+               | Automation Counsulting Solutions
+          #collapseThree.collapse(aria-labelledby='automation', data-parent='#accordion')
+            .card-body
+              .clearfix
+                img.img-fluid.float-left.float-sm-right.float-md-left.rounded.p-2(src="/images/automation-process.jpg", alt="Automation solution and services")
+                P Cheenis Solution provides real-time process / industry automation management software and solutions for Supervisory HMI, ICSS/ PLC/ DCS/ESD/ F&G/ SCADA/ BMS SYSTEMS, Mobile Operations, Production Management, MES, Performance Management, EMI, and Integration with Asset Management, Supply and Demand Chain and ERP applications. Cheenis has the necessary expertise to engineer innovative, effective and reliable solutions.
+                P Cheenis delivers precise solutions that optimize process performance and improve customer satisfaction whereas lessening operating and ownership cost. With a profile of executing projects to the highest quality and to the agreed schedules; we are determined in delivering excellence in each project we execute. We are actively involved in Feasibility Study, Front End Engineering and Design (FEED), Engineering, Procurement, Installation and Commissioning (EPIC) of Process, Electrical, Instrumentation, Energy Audits & Process Optimization, Power Management System, Control and Telecom Systems using our competent resources.
+                P.lead Some of the Automation Consulting activities that we deliver are as follows:
+              h4 Some of the Automation Consulting activities that we deliver are as follows:
+              ul.list-unstyled
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Engineering Procurement Installation and Commissioning (EPIC) Solutions
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Automation Solutions – Selection of Field Instruments, Controllers, Control Elements required to automate a process and develop control logic and execute commissioning.
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Detail Engineering – Datasheets, Specification, P&ID, BOM, Cable schedule, Interlock Diagrams, Routing Diagram, Hook-Up Diagram, Termination drawings, Ferrule list, Installation and Testing Procedures etc.
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Project Schedule – Engineering schedule, Procurement Schedule, Construction, Testing and Commissioning Schedule etc.
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Field As Built Engineering- As built Hook-up, Routing diagram, Termination drawings, Instrument History sheet.
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Site Test Reports-Loop checking, Impulse line testing, Cable and Panel Continuity, Insulation testing, earth resistance test reports etc.
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Site material close-out sheet – Material Requisition and Material consolidation reports
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Instrument Pre-Installation Checks – Datasheet, Purchase order, Test report verification and Calibration if required.
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Instrument Installation – As per Hook up drawing and Impulse line fit up report, Glanding, Termination, Earthing.
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Testing – Continuity, earth resistance, Meagering, Hydraulic or Pneumatic checking etc.
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Instrument Commissioning – Power up and loop checking.
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Process stabilization- Tuning of the process.
+                li
+                  i.fa.fa-check.text-success.pr-1.fa-lg
+                  | Material close out and Report submissions.
+
+        .card
+          #talent.card-header.pointer.collapsed(data-toggle='collapse', data-target='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+            h5.mb-0
+              button.btn.btn-link
+               | Talent Resourcing Solutions
+          #collapseFour.collapse(aria-labelledby='talent', data-parent='#accordion')
+            .card-body
+              h3 Employer service - Looking to recruit?
+              .clearfix
+                img.img-fluid.float-left.float-sm-right.float-md-left.rounded.p-2(src="/images/training-development-icon.jpg", alt="telent resourcing and development")
+                p We offer expert solutions in qualified, professional and skilled recruitment. Our expert consultants assist candidates to discover their next challenging role and they also help our customers to frame workforces and deal with talent shortages. If you are looking to recruit someone who can transform your business concern, Cheenis will provide you approach to more talent from several locations across the globe. We provide brilliant resourcing through a blend of market perception, technical excellence and superlative methodology, offering talent solutions that will transform your enterprise.
+                p Discover the best talent. Manage time and spare money. Mitigate risks. We manage after your resourcing in order that you accomplish more.
+              blockquote.blockquote.text-center.text-success.border-left.ml-4 You shoulder a lot of duty. Let us lessen the weight.
+              p Contracting out your recruitment process to us grants you access to the right people at the right circumstance. We impersonate ourselves as a part of your team, operating with your hiring managers, on your brand foot, with your culture, to manage all things related to talent acquisition.
+              h3 Candidate services - Searching for jobs?
+              p We not only perform ourselves as service provider, but also as a long-term teammate and intimate to our customers and candidates. We assist companies in the selection of the right personnel for their key positions. And we support candidates or applicants in the search for the right position in a work ambient that suits and challenges them. The bilateral personal contact to both parties, our skill, expertise and our understanding for people support us to originate connections that are professionally and personally beneficial. Our talent resourcing service currently focusses in integrating experienced engineering and IT specialists from across the globe to Europe and Middle east.
+
+

@@ -1,0 +1,100 @@
+extends layouts/default
+block prepend link
+  - var selected = 'CORPORATE VALUES'
+block title
+  title='Cheenissolution | Contact, contact us'
+
+
+block content
+
+  //main
+  section.mt-5
+    .container
+      nav
+        #nav-tab.nav.nav-tabs.nav-justified.bg-light(role='tablist')
+          a#nav-mission-tab.nav-item.nav-link.active(data-toggle='tab', href='#nav-mission', role='tab', aria-controls='nav-home', aria-selected='true')
+            | MISSION
+          a#nav-vision-tab.nav-item.nav-link(data-toggle='tab', href='#nav-vision', role='tab', aria-controls='nav-profile', aria-selected='false')
+            | VISION
+          a#nav-values-tab.nav-item.nav-link(data-toggle='tab', href='#nav-values', role='tab', aria-controls='nav-contact', aria-selected='false')
+            | VALUES
+          a#nav-responsibility-tab.nav-item.nav-link(data-toggle='tab', href='#nav-responsibility', role='tab', aria-controls='nav-contact', aria-selected='false')
+            | RESPONSIBILITY
+      #nav-tabContent.tab-content
+        #nav-mission.tab-pane.fade.show.active.my-3.p-2(role='tabpanel', aria-labelledby='nav-mission-tab')
+          p
+            | Our mission is to supervise companies throughout the process of strategic change. We assist strategic and tactical corporate responses to the challenges and opportunities caused by global proliferation, technology and contention. Our function is to operate as a reliable consultant, delivering objective and results-driven analysis, solutions and implementation.
+            | This mission is pronounced in our corporate motto:
+          p
+            strong  “Our innovation is your success”
+          p
+            | To work towards 'customer delight' by harnessing best-in-class talent, creating a knowledge pool and implementing proven processes to become a preferred partner of our clients. We recognize that our employees are the key to achieve the goals of the organization and we are committed to recruit, train and retain the competent people.
+            | Cheenis Solution is fully committed to deliver services that meets market demands and exceed customer expectancies, with the highest standards of quality and excellence; We are committed to meet global standards and provide technological innovations for premium value in engineering services and reliable results,
+            | and to be a valued partner to our clients and an asset to our communities. We will conduct our business activities in a manner that is consistent with the international best practices providing timely and responsible solutions and ensuring value for money to all our customers.
+          p Our motto is to continuously enhance the customer experience in Automation & IT Solutions to the extent that it becomes a 'Delight' by Providing innovative, advanced automation and IT solutions of the fourth industrial revolution.
+            | “To deliver the highest quality, incredibly innovative and most cost-effective solutions in the world” To bring success to our clients, continuously contribute toward enhancing their corporate value, care for people and environment and deliver results through innovation.
+
+        #nav-vision.tab-pane.fade.my-3.p-2(role='tabpanel', aria-labelledby='nav-vision-tab')
+          p
+            strong Our Vision is “Delivering the right automation and IT solution and making it accessible for everyone.”
+          p
+            | Our success is built on an extraordinary commitment to quality and excellence in providing noteworthy services, client delight, robust focus on collaboration establishment and determination to thrive in every business endeavor.
+            | We continue to explore new business interests as a part of a long-term growth strategy and as an innovator – framing new standards in various sectors.
+          p  Cheenis Solution strives to be the most valued consultant to our customers, providing technology and innovative business solutions and to our business colleagues, while enabling employee growth and satisfaction;
+            | To be recognized as the global leader of automation and IT consultancy solutions and the strategic partner of choice for supporting our clients’ quest for performance excellence, business transformation, capability development and continuous improvement.
+          P  We aspire to be the world’s premier organization in functioning as the best one-stop destination for design, engineering, IT, project management and Training solutions; in delivering value-added industry solutions that offer a competitive advantage and achieving extraordinary results for our customers; building satisfying careers for our people and earning a fair return on the value we deliver.
+          P  Through our future-oriented and sustainable action, energized by our belief in the law of engineering, we frame the world more rewarding. Every day.
+
+        #nav-values.tab-pane.fade.my-3.p-2(role='tabpanel', aria-labelledby='nav-values-tab')
+          P Cheenis Solution is driven by a passion for quality and excellence and guided by its core corporate values and will persist to show the way as the most dynamic and fortunate business organization. Our zeal for automation, technology and our customers is reflected in our corporate values: With our strong values which orbits around Innovation, Integrity, Quality, Customer Focus, Teamwork, Reliability Cheenis Solution will persist on its route to success.
+          P <strong class="border-bottom">Innovation :</strong> We nurture creative work environment where we always challenge ourselves to improve our processes and procedures; where creative thoughts, that fosters process enhancement delivering value to us and our customers are encouraged and rewarded. We apply our total know-how and experience efficiently within the entire company in order to continuously deliver innovative solutions.
+           |  We constantly strive to redefine the standard of excellence in everything we do.
+           | Hence, we are open to ideas that challenge the conventional views and drive innovation.
+          P <strong class="border-bottom">Integrity :</strong> We are determined with our values and in what we preach and agree which is based on trust, honesty, courage, ethics, consistency and responsibility. We keep our word, deliver on our promises and acknowledge our mistakes. In everything we do, we act with the highest standards of integrity, providing quality service, being reliable and responsible; we trust that our reputation is more important than any other temporary reward.
+           | We are a trustworthy, loyal and respectful partner in all our internal and external relationships.
+          p
+            strong.border-bottom Quality :
+            |   We will strive for continuous quality improvement in all that we do. We are committed to catering high-quality services and products. We fulfill the mutually acknowledged requirements the first time and strive for perpetual improvement of our work processes. We take dignity in delivering solutions and services of high quality and value, that we uphold, which ensures customer satisfaction, profitability and the future of our employees and our growth.
+          P
+            strong.border-bottom Customer Focus :
+            |   We inspire our customers with great dedication, understanding of their applications and technical competence. For us, customer orientation also means that we work together with our customers in partnership. Our customer’s wishes are our driving force. Thus, we see ourselves as an innovation partner who is shaping the future together with our customers.
+            | We are committed to deliver our services in a way that our customers can be profited from them in the most efficacious, cost beneficial and most gratifying manner possible.
+            | We relish their custom and so they deserve out service-timely, responsive, proactive, meeting their needs and aiming to delight. We aspire to deliver extraordinary customer service through pliable scheduling, quality services, and innovative solutions conducing value to the customer and company.
+          p
+            strong.border-bottom Teamwork :
+            |   We foster collaboration to achieve our goals while maintaining and encouraging individual contribution and accountability. We treat mutually with respect and communicate candidly. We acknowledge the value of various perspectives and diversified expertise. We trust our persisted success lies in teamwork; in the opportunity each teammate has got to learn, develop and grow.
+            | We intent to frame strong partnerships by engaging with our suppliers and contractors, customers, employees, governments, communities and civil society through active interactions and engagement. We operate with our clients and vendors in a manner that our determinations and our style of synergy pave the way for success of both organizations.
+            | We take ownership for delivering professional services and meeting customer’s requirements. We support and honor each other’s success through teamwork.
+          p
+            strong.border-bottom Reliability :
+            |   Trust is the foundation of our success. Our customers’ trust in our competencies as well as trust in ourselves and one another. Under all circumstances, we believe in complete honesty, consistency, and reliability. We fulfill our commitments to our employees, customers and community. We deliver consistent performance always. We make effective use of time, plan well in advance for excellent outcome.
+            | We deliver success to our customers through trust and partnership; deliver on our commitments.
+            | We count on mutual loyalty, support and reliability in our company. Reliability is the basis for the relationship with our customers, partners, suppliers and colleagues. We stand by our word.
+
+        #nav-responsibility.tab-pane.fade.my-3.p-2(role='tabpanel', aria-labelledby='nav-responsibility-tab')
+          P
+            h3 Corporate Social Responsibility (CSR)
+            | CSR is a significant element in accomplishing our vision, particularly in a manner that it values and builds its connections with customers, business associates, employees and the entire community. We accept that our duty and accountability as inhabitants of the world is to assist enhance society by initiating a enterprising move towards our social roles and we keep an tacit obligation to return to the society.
+            |  We are a liable, pledged, and dedicated corporate citizen.
+          p At Cheenis Solution, we take the responsible entrepreneurial action, also known as Corporate Social Responsibility (CSR), very seriously. Through our voluntary activities, we make a social contribution to minimize the environmental impact of the company, ensure a safe working environment for our employees and guarantee a high standard of qualifications and Competences for our customers and sales partners.
+          p As a medium-sized international company, we intend to consistently demonstrate our sustainable corporate governance policies across all our divisions, services, business units and offices around the world.
+          P
+            strong.border-bottom Ethical entrepreneurship :
+            |   Cheenis is committed itself to ethical entrepreneurialism and denies all forms of inequity, intimidation and savagery in the workplace, in the company relations and other activities. Respect for individual values and rights forms the basis of our relationships with customers, employees and our community. We aspire for equal opportunities and equalitarianism for all our employees.
+          P
+            strong.border-bottom Corporate social responsibility :
+            |   Cheenis believes that a strong commitment to CSR is essential to sustaining business growth and success as it promotes innovation, creativity and accountability in catering to the needs of customers.
+          P Cheenis aspires for an open, constructive conversation with local authorities, social allies and all other groups associated with our activities.
+           | Where feasible we encourage and support local initiatives on a social, economical and cultural level, that are schemed to benefit customers, employees and the community at large.
+          P We make sure our employees work in safe, hygienic and healthy environment. We are committed to a good balance between work and private life for every employee. A key element of our CSR strategy is to engage in meaningful interaction and exchange of ideas with like-minded groups and institutions,
+           | which enable the organization to extend and share its knowledge and understanding of the latest developments and trends in the domain of CSR.
+          P
+            strong.border-bottom Ecological entrepreneurship :
+            |   We want to minimize our environmental impact and diminish our CO2 emissions by employing an ecological and energy efficient infrastructure, processes and products for our own selves and by incorporating these values in our products and services offerings.
+            | We promote sustainable mobility, such as environmentally friendly mode of transport; recycling and reuse of resources and products.
+
+
+
+
+
+
