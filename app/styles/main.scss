@@ -6,6 +6,7 @@
 
 $primary: rgb(0, 108, 181);
 $secondary: rgb(168, 207, 69);
+$black : #000 ; 
 @import 'scss/bootstrap';
 
 .d-relative {
@@ -121,4 +122,26 @@ a.active{
 }
 .pointer{
   cursor: pointer;
+}
+.button-color{
+background-color : $primary ;
+}
+.green-button{
+  background-color : $secondary ; 
+}
+
+.valueimage {
+  margin-top: 20px 
+  
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 50%;
+}
+
+.imagesize{
+width : 350px ; 
+height: 350px
 }
