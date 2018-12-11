@@ -11,15 +11,15 @@ block content
   section.mt-5
     .container
       nav
-        #nav-tab.nav.nav-tabs.nav-justified.bg-light(role='tablist')
+        #nav-tab.nav.nav-tabs.nav-justified.green-button(role='tablist')
           a#nav-mission-tab.nav-item.nav-link.active(data-toggle='tab', href='#nav-mission', role='tab', aria-controls='nav-home', aria-selected='true')
-            | MISSION
+            p.text-blue|  MISSION
           a#nav-vision-tab.nav-item.nav-link(data-toggle='tab', href='#nav-vision', role='tab', aria-controls='nav-profile', aria-selected='false')
-            | VISION
+            p.text-blue| VISION
           a#nav-values-tab.nav-item.nav-link(data-toggle='tab', href='#nav-values', role='tab', aria-controls='nav-contact', aria-selected='false')
-            | VALUES
+            p.text-blue| VALUES
           a#nav-responsibility-tab.nav-item.nav-link(data-toggle='tab', href='#nav-responsibility', role='tab', aria-controls='nav-contact', aria-selected='false')
-            | RESPONSIBILITY
+            p.text-blue| RESPONSIBILITY
       #nav-tabContent.tab-content
         #nav-mission.tab-pane.fade.show.active.my-3.p-2(role='tabpanel', aria-labelledby='nav-mission-tab')
           p
@@ -47,6 +47,10 @@ block content
 
         #nav-values.tab-pane.fade.my-3.p-2(role='tabpanel', aria-labelledby='nav-values-tab')
           P Cheenis Solution is driven by a passion for quality and excellence and guided by its core corporate values and will persist to show the way as the most dynamic and fortunate business organization. Our zeal for automation, technology and our customers is reflected in our corporate values: With our strong values which orbits around Innovation, Integrity, Quality, Customer Focus, Teamwork, Reliability Cheenis Solution will persist on its route to success.
+             
+            img.img-fluid.rounded.responsive.valueimage.center(src="/images/values.png" alt="cheenis solution about us image")
+
+
           P <strong class="border-bottom">Innovation :</strong> We nurture creative work environment where we always challenge ourselves to improve our processes and procedures; where creative thoughts, that fosters process enhancement delivering value to us and our customers are encouraged and rewarded. We apply our total know-how and experience efficiently within the entire company in order to continuously deliver innovative solutions.
            |  We constantly strive to redefine the standard of excellence in everything we do.
            | Hence, we are open to ideas that challenge the conventional views and drive innovation.
