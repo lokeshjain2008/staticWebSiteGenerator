@@ -10,7 +10,7 @@ mixin navLink(link, name)
       class={'active text-info': name == selected}
     ) #{name}
 
-nav(class="navbar navbar-expand-lg navbar-light bg-secondary fixed-top")
+nav(class="navbar navbar-expand-lg navbar-light bg-white fixed-top")
   .container
     a.navbar-brand(href='#')
       img(src="/images/logo-nav.jpg")
@@ -24,6 +24,6 @@ nav(class="navbar navbar-expand-lg navbar-light bg-secondary fixed-top")
         +navLink('/corporate.html', "CORPORATE VALUES")
         +navLink('/about.html', "ABOUT US")
         +navLink('/contact.html', "CONTACT")
-       
+
 
 
